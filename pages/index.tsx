@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 const Home: NextPage = () => {
 	return (
@@ -86,10 +86,10 @@ const Home: NextPage = () => {
 						<button>Подать Объявление</button>
 					</Link>
 				) : (
-					activeUser
-					&& activeUser.user
-					&& !activeUser.user.company
-					&& activeUser.user.activated && (
+					activeUser &&
+					activeUser.user &&
+					!activeUser.user.company &&
+					activeUser.user.activated && (
 						<Link href={{ pathname: '/company/form' }} passHref>
 							<button>Зарегистрировать Компанию</button>
 						</Link>
